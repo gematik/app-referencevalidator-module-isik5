@@ -19,7 +19,7 @@ context:
     validationLevelPolicy: "SHOW_WARNINGS_AND_ERRORS"
     unknownCodeSystemsPolicy: "ALLOWED"
     exampleCodeSystemsUsagePolicy: "DISALLOWED"
-    exampleUrlsUsagePolicy: "ALLOWED"
+    exampleUrlsUsagePolicy: "DISALLOWED"
     exampleRestReferencesPolicy: "ALLOWED"
     recursiveModePolicy: "DISALLOWED"
     anyExtensionPolicy: "ALLOWED"

@@ -2,7 +2,7 @@ configSpecVersion: '3.0'
 name: isik5
 author: 'gematik GmbH'
 description: "Reference Validator Module for the specification 'Informationstechnische Systeme in Krankenhäusern (ISIK)'"
-version: '3.0'
+version: '${project.version}'
 specUrl: "https://simplifier.net/packages/de.gematik.isik"
 errorOnUnknownProfile: true
 anyExtensionsAllowed: true
@@ -14,6 +14,7 @@ ignoredCodeSystems:
   - "http://fhir.de/CodeSystem/bfarm/atc"
   - "http://fhir.de/CodeSystem/bfarm/ops"
   - "http://dvmd.de/fhir/CodeSystem/kdl"
+  - "http://fhir.de/CodeSystem/ifa/pzn"
   - "urn:iso:std:iso:11073:10101"
   - "http://hl7.org/fhir/encounter-status"
 
@@ -22,7 +23,7 @@ ignoredValueSets:
   - "https://gematik.de/fhir/isik/ValueSet/DiagnosesSCT"
   - "https://gematik.de/fhir/isik/ValueSet/ProzedurenKategorieSCT"
   - "https://gematik.de/fhir/isik/ValueSet/ISiKTerminPriority"
-  - "http://fhir.de/ValueSet/bfarm/ops" # Das Code System ist als FHIR nicht vorhanden
+  - "http://fhir.de/ValueSet/bfarm/ops"
   - "https://gematik.de/fhir/isik/ValueSet/SctRouteOfAdministration"
   - "http://dvmd.de/fhir/ValueSet/kdl"
   - "http://fhir.de/ValueSet/EncounterStatusDe"
@@ -45,14 +46,14 @@ messageTransformations:
 packageGroups:
   isik.stufe.5:
     packages:
-      - "de.gematik.isik#5.1.3"
+      - "de.gematik.isik#5.2.0"
     messageTransformations: [ "ignore_terminology_server_errors", "ignore_match_multiple_slices" ]
 
 profileFamilies:
   stufe-5:
     canonicalBase: "https://gematik.de/fhir/isik/StructureDefinition"
-    defaultVersion: "5.0.0"
+    defaultVersion: "5.2.0"
     versions:
-      "5.0.0":
+      "5.2.0":
         groups:
           - packageGroupName: isik.stufe.5
